@@ -1,0 +1,36 @@
+2025-12-31 18:09:25 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:26 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:26 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:28 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:28 INFO  Hooks - Scenario passed: Validate login with multiple credentials
+2025-12-31 18:09:28 INFO  Hooks - Closed WebDriver
+2025-12-31 18:09:28 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:28 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:28 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:30 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:31 INFO  Hooks - Scenario passed: Validate login with multiple credentials
+2025-12-31 18:09:31 INFO  Hooks - Closed WebDriver
+2025-12-31 18:09:31 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:31 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:31 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:33 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:33 INFO  Hooks - Scenario passed: Validate login with multiple credentials
+2025-12-31 18:09:33 INFO  Hooks - Closed WebDriver
+2025-12-31 18:09:33 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:33 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:33 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:35 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:36 INFO  Hooks - Scenario passed: Validate login with multiple credentials
+2025-12-31 18:09:36 INFO  Hooks - Closed WebDriver
+2025-12-31 18:09:36 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:36 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:36 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:38 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:38 INFO  Hooks - Scenario passed: Validate login with multiple credentials
+2025-12-31 18:09:38 INFO  Hooks - Closed WebDriver
+2025-12-31 18:09:38 INFO  Hooks - Initializing WebDriver
+2025-12-31 18:09:38 INFO  WebDriverManager - Using chromedriver 143.0.7499.169 (resolved driver for Chrome 143)
+2025-12-31 18:09:38 INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\juver\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe
+2025-12-31 18:09:40 INFO  LoginSteps - Navigating to login page
+2025-12-31 18:09:46 INFO  Hooks - Scenario passed: Validate login for performance_glitch_user
+2025-12-31 18:09:46 INFO  Hooks - Closed WebDriver

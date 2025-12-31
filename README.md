@@ -13,7 +13,7 @@
 1. Install Java 11+ and Maven.
 2. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/AutomationTesterUK/dts-test-automation-challenge.git
 3. Install dependencies:
    ```bash
    mvn clean install

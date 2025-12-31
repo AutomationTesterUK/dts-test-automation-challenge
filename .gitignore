@@ -3,7 +3,7 @@ allure-results/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-logs/óí
+logs/
 # Ignore all files in the .idea folder
 .idea/
 .allure

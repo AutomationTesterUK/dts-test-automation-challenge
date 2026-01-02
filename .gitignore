@@ -7,6 +7,7 @@ logs/
 # Ignore all files in the .idea folder
 .idea/
 .allure
+screenshots
 
 # Except these files, which can be shared
 !.idea/workspace.xml

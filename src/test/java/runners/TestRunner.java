@@ -12,6 +12,7 @@ import io.cucumber.testng.CucumberOptions;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "html:target/cucumber-reports.html"
         },
+        tags ="@performance" ,
         monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

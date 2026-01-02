@@ -12,6 +12,9 @@ import utils.DriverFactory;
 
 import java.time.Duration;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
 public class LoginSteps {
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
     LoginPage loginPage;
@@ -20,6 +23,7 @@ public class LoginSteps {
     public void i_am_on_the_login_page() {
         logger.info("Navigating to login page");
         loginPage = new LoginPage(DriverFactory.getDriver());
+        loginPage.navigateTo("https://www.saucedemo.com/");
     }
 
     @When("the user enters username {string} and password {string}")
@@ -33,34 +37,26 @@ public class LoginSteps {
         loginPage.clickLogin();
     }
 
-    @Then("the user should see {string}")
+    @Then("the user should see {string} page")
     public void i_should_see(String expectedResult) {
         if (expectedResult.equalsIgnoreCase("dashboard")) {
-            Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains("inventory.html"));
-        } else {
-            Assert.assertTrue(loginPage.getErrorMessage().contains(expectedResult));
+            assertThat(loginPage.getCurrentUrl("inventory"), containsString("inventory.html"));
+        }
+       else {
+            assertThat(loginPage.getErrorMessage(), containsString(expectedResult));
         }
     }
-    @Then("the user should see {string} even if it takes longer")
-    public void i_should_see_even_if_it_takes_longer(String expectedResult) {
-        WebDriver driver = DriverFactory.getDriver();
-        long startTime = System.currentTimeMillis();
-        try {
-            new WebDriverWait(driver, Duration.ofSeconds(15))
-                    .until(d -> d.getCurrentUrl().contains("inventory.html"));
-        } catch (Exception e) {
-            Assert.fail("Dashboard did not load within expected time.");
-        }
-
-        long endTime = System.currentTimeMillis();
-        long loadTime = endTime - startTime;
-
-        // Validate that load time is at less than 35 seconds (simulate performance expectation)
-        Assert.assertTrue(loadTime <= 35 ,
-                "Expected load time to be <= 30 seconds for performance_glitch_user, but was " + loadTime + " ms");
-
-        Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"),
-                "Dashboard URL not loaded correctly.");
-
+    @Then("the user should see {string} in less than {long} seconds")
+    public void i_should_see_even_if_it_takes_longer(String expectedResult,long maxWaitSeconds) {
+        long loadTime = loginPage.waitForDashboardAndValidateLoadTime();
+        logger.info("loadtime == "+loadTime);
+        assertThat(loadTime,lessThanOrEqualTo(maxWaitSeconds));
+        assertThat(loginPage.getCurrentUrl("inventory"), containsString("inventory.html"));
     }
+
+    @Then("the user should see {string} button")
+    public void the_user_should_see_button(String buttonName) {
+        assertThat(loginPage.isButtonDisplayed(buttonName),equalTo(true));
+     }
+
 }

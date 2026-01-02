@@ -17,7 +17,7 @@ public class Hooks {
         logger.info("Initializing WebDriver");
         String browser = System.getProperty("browser", "chrome");
         WebDriver driver = DriverFactory.initDriver(browser);
-        driver.get("https://www.saucedemo.com/");
+
     }
 
     @After

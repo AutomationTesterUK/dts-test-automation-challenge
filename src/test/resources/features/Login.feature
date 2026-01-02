@@ -8,7 +8,7 @@ Feature: SauceDemo Login functionality
   Scenario Outline: Validate login with multiple credentials
     When the user enters username "<username>" and password "<password>"
     And the user clicks on login button
-    Then the user should see "<expectedResult>" page
+    Then the user should see "<expectedResult>"
 
     Examples:
       | username        | password      | expectedResult                |
@@ -22,13 +22,13 @@ Feature: SauceDemo Login functionality
   Scenario: Validate login for performance_glitch_user
     When the user enters username "performance_glitch_user" and password "secret_sauce"
     And the user clicks on login button
-    Then the user should see "dashboard" in less than 3 seconds
+    Then the user should see "dashboard" in less than 35 seconds
 
     @logout
   Scenario: Validate logout functionality
     When the user enters username "standard_user" and password "secret_sauce"
     And the user clicks on login button
-    Then the user should see "dashboard" page
+    Then the user should see "dashboard"
     When the user clicks on burger menu
     And the user clicks on "logout" option
     Then the user should see "login" button

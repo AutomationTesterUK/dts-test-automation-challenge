@@ -37,7 +37,7 @@ public class LoginSteps {
         loginPage.clickLogin();
     }
 
-    @Then("the user should see {string} page")
+    @Then("the user should see {string}")
     public void i_should_see(String expectedResult) {
         if (expectedResult.equalsIgnoreCase("dashboard")) {
             assertThat(loginPage.getCurrentUrl("inventory"), containsString("inventory.html"));
@@ -49,7 +49,6 @@ public class LoginSteps {
     @Then("the user should see {string} in less than {long} seconds")
     public void i_should_see_even_if_it_takes_longer(String expectedResult,long maxWaitSeconds) {
         long loadTime = loginPage.waitForDashboardAndValidateLoadTime();
-        logger.info("loadtime == "+loadTime);
         assertThat(loadTime,lessThanOrEqualTo(maxWaitSeconds));
         assertThat(loginPage.getCurrentUrl("inventory"), containsString("inventory.html"));
     }

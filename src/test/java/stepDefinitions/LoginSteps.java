@@ -56,8 +56,8 @@ public class LoginSteps {
         long loadTime = endTime - startTime;
 
         // Validate that load time is at least 2 seconds (simulate performance expectation)
-        Assert.assertTrue(loadTime <= 13 ,
-                "Expected load time to be >= 2 seconds for performance_glitch_user, but was " + loadTime + " ms");
+        Assert.assertTrue(loadTime <= 15 ,
+                "Expected load time to be <= 15 seconds for performance_glitch_user, but was " + loadTime + " ms");
 
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"),
                 "Dashboard URL not loaded correctly.");

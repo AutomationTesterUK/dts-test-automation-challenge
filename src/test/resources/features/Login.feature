@@ -1,8 +1,10 @@
 
 Feature: SauceDemo Login functionality
 
-  Scenario Outline: Validate login with multiple credentials
+  Background:
     Given the user is on the login page
+
+  Scenario Outline: Validate login with multiple credentials
     When the user enters username "<username>" and password "<password>"
     And the user clicks on login button
     Then the user should see "<expectedResult>"
@@ -16,7 +18,6 @@ Feature: SauceDemo Login functionality
       | standard_user   | empty         | Epic sadface: Password is required |
 
   Scenario: Validate login for performance_glitch_user
-    Given the user is on the login page
     When the user enters username "performance_glitch_user" and password "secret_sauce"
     And the user clicks on login button
     Then the user should see "dashboard" even if it takes longer
